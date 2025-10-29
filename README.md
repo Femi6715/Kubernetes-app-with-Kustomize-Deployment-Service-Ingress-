@@ -13,6 +13,7 @@ This project deploys a simple **Python HTTP server** on **Kubernetes**, using:
 
 ---
 
+
 ## 🛠️ Setup
 1. Build and push your image:
    ```bash
