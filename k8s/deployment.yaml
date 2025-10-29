@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pyapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pyapp
+  template:
+    metadata:
+      labels:
+        app: pyapp
+    spec:
+      containers:
+        - name: pyapp
+          image: ghcr.io/your-user/k8s-python-app:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: APP_GREETING
+              value: "Hello from Kubernetes"
