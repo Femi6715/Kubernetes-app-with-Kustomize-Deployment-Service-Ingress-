@@ -1,20 +1,20 @@
-# k8s-python-app-kustomize
 
-Demo Python HTTP app containerized and deployed to Kubernetes with **Deployment**, **Service**, **Ingress**, and **Kustomize** overlays.
+---
 
-## Build & Push (example with GHCR)
+## ☸️ **2️⃣ k8s-python-app-kustomize**
+```markdown
+# Kubernetes Python App with Kustomize
 
-```bash
-IMAGE=ghcr.io/<your-username>/k8s-python-app:latest
-docker build -t $IMAGE app
-echo $CR_PAT | docker login ghcr.io -u <your-username> --password-stdin
-docker push $IMAGE
-```
+This project deploys a simple **Python HTTP server** on **Kubernetes**, using:
+- **Deployment** for scaling
+- **Service** for networking
+- **Ingress** for external access
+- **Kustomize** for configuration management
 
-## Deploy
+---
 
-```bash
-kubectl apply -k k8s
-# Test (with ingress & DNS set up):
-# curl -H "Host: pyapp.local" http://<ingress-ip>/
-```
+## 🛠️ Setup
+1. Build and push your image:
+   ```bash
+   docker build -t ghcr.io/<your-username>/k8s-python-app:latest app
+   docker push ghcr.io/<your-username>/k8s-python-app:latest
