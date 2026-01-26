@@ -1,7 +1,7 @@
 
 ---
 
-## ☸️ **2️⃣ k8s-python-app-kustomize**
+## k8s-python-app-kustomize**
 ```markdown
 # Kubernetes Python App with Kustomize
 
@@ -14,8 +14,7 @@ This project deploys a simple **Python HTTP server** on **Kubernetes**, using:
 ---
 
 
-## 🛠️ Setup
+##  Setup
 1. Build and push your image:
-   ```bash
    docker build -t ghcr.io/<your-username>/k8s-python-app:latest app
    docker push ghcr.io/<your-username>/k8s-python-app:latest
